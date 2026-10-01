@@ -42,6 +42,32 @@ final class SpotifyPlayingItemView: PKDetailView {
 
 	let progressBar = ProgressBarView(frame: .zero)
 
+	/// Artwork matches the height of the Touch Bar buttons (PKDetailView uses 24)
+	private static let artworkSize: CGFloat = 30
+	private var containerWidthConstraint: NSLayoutConstraint?
+
+	/// Replaces PKDetailView's layout, which fixes the icon at 24pt and insets the content vertically.
+	override func updateConstraint() {
+		guard let container = contentContainer else {
+			return
+		}
+		if containerWidthConstraint == nil {
+			container.edgesToSuperview()
+			imageView.width(SpotifyPlayingItemView.artworkSize)
+			imageView.height(SpotifyPlayingItemView.artworkSize)
+			imageView.imageScaling = .scaleProportionallyUpOrDown
+			imageView.wantsLayer = true
+			imageView.layer?.cornerRadius = 5
+			imageView.layer?.masksToBounds = true
+			// Keep the labels clear of the progress bar
+			labelsContainer.edgeInsets = NSEdgeInsets(top: 2, left: 0, bottom: 4, right: 0)
+			containerWidthConstraint = container.width(0)
+		}
+		// contentWidth assumes a 24pt icon
+		let width = contentWidth + SpotifyPlayingItemView.artworkSize - 24
+		containerWidthConstraint?.constant = maxWidth > 0 ? min(maxWidth, width) : width
+	}
+
 	override func didLoad() {
 		canScrollTitle = true
 		canScrollSubtitle = true
