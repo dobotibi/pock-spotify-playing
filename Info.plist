@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>en</string>
+	<key>CFBundleDisplayName</key>
+	<string>Spotify Playing</string>
+	<key>CFBundleExecutable</key>
+	<string>SpotifyPlaying</string>
+	<key>CFBundleIdentifier</key>
+	<string>hu.tibu.pock.SpotifyPlaying</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>SpotifyPlaying</string>
+	<key>CFBundlePackageType</key>
+	<string>BNDL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.1</string>
+	<key>CFBundleVersion</key>
+	<string>1</string>
+	<key>LSMinimumSystemVersion</key>
+	<string>10.15</string>
+	<key>NSHumanReadableCopyright</key>
+	<string>Based on Now Playing by Pierluigi Galdi (MIT).</string>
+	<key>NSPrincipalClass</key>
+	<string>SpotifyPlaying.SpotifyPlayingWidget</string>
+	<key>PKWidgetAuthor</key>
+	<string>dobotibi</string>
+	<key>PKWidgetPreferenceClass</key>
+	<string>SpotifyPlaying.SpotifyPlayingPreferencePane</string>
+</dict>
+</plist>

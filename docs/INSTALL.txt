@@ -1,0 +1,13 @@
+Spotify Playing – Pock Touch Bar widget for Spotify
+
+1. Double-click SpotifyPlaying.pock (or Pock > Widgets Manager > Install widget...)
+2. Pock > Customize Touch Bar... > drag "Spotify Playing" onto the Touch Bar
+3. When macOS asks whether Pock may control Spotify, click OK
+
+Tap: play/pause · Swipe: previous/next · Long press: open Spotify
+Settings: Pock > Widgets Manager > Spotify Playing
+
+If Pock won't load the widget, run in Terminal and restart Pock:
+  xattr -dr com.apple.quarantine ~/Library/Application\ Support/Pock/Widgets/SpotifyPlaying.pock
+
+More info: see the project page on GitHub.
